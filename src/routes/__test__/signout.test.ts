@@ -1,14 +1,8 @@
 import request from 'supertest';
 import {app} from "../../app";
-import {AuthHelper} from "../../test/auth-helper";
 
 const signoutUrl = '/api/users/signout';
 describe("signout", () => {
-    let cookie: string;
-
-    beforeEach(async () => {
-        cookie = await AuthHelper.signup()
-    })
 
     it('should return a 200 successful signout', async () => {
         return request(app)

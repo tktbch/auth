@@ -1,13 +1,13 @@
 import request from 'supertest';
 import {app} from "../../app";
-import {AuthHelper} from "../../test/auth-helper";
+import {getCookie} from "@tktbitch/common";
 
 const URL = '/api/users/currentuser';
 
 describe(URL, () => {
 
     it('should respond with the current user if logged in', async () => {
-        const cookie = await AuthHelper.signup();
+        const cookie = getCookie();
         const resp = await request(app)
             .get(URL)
             .set('Cookie', cookie)
