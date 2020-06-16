@@ -7,7 +7,7 @@ import {signinRouter} from "./routes/signin";
 import {signoutRouter} from "./routes/signout";
 import {signupRouter} from "./routes/signup";
 import cookieSession from "cookie-session";
-import {errorHandler, NotFoundError} from "@tktbitch/common";
+import {errorHandler, NotFoundError} from "@tktbch/common";
 
 const app = express();
 app.set('trust proxy', true);

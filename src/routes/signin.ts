@@ -3,7 +3,7 @@ import { body } from "express-validator";
 import jwt from 'jsonwebtoken';
 import {PasswordHashUtil} from "../utils/password-hash-util";
 import {User} from "../models/user";
-import {BadRequestError, validateRequest} from "@tktbitch/common";
+import {BadRequestError, validateRequest} from "@tktbch/common";
 
 const router = express.Router();
 router.post('/api/users/signin', [
